@@ -76,9 +76,9 @@ export default function Footer() {
         }, ${date.getFullYear()}`,
       },
     ]);
-    // console.log("input ref value", inputRef.current.value);
+
     inputRef.current.value = "";
-    // console.log("input ref value", inputRef.current.value);
+
     Timeout();
   };
   const handleReply = (input) => {
@@ -100,7 +100,6 @@ export default function Footer() {
       ]);
       console.log("the timeout that was the first timeout has run");
     }, 5000);
-    // console.log("the first timeout and its timeout id is", timeoutId.current);
   }
   useEffect(() => {
     inputRef.current.focus();
@@ -108,9 +107,7 @@ export default function Footer() {
   useEffect(() => {
     debouncing();
   }, []);
-  //   useEffect(() => {
-  //     inputRef.current.value = "";
-  //   }, [myObj]);
+
   function Timeout() {
     if (timeoutId.current) {
       clearTimeout(timeoutId.current);
@@ -132,9 +129,6 @@ export default function Footer() {
         ];
       });
       console.log("the timeout set on onchange and onclick has run");
-      //   setTimeout(() => {
-      //     console.log("hey this is my object", myObj);
-      //   }, 5000);
     }, 5000);
     console.log("the timeout set on onChange and onClick", timeoutId.current);
   }
