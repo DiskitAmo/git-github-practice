@@ -128,9 +128,7 @@ export default function Footer() {
           },
         ];
       });
-      console.log("the timeout set on onchange and onclick has run");
     }, 5000);
-    console.log("the timeout set on onChange and onClick", timeoutId.current);
   }
   return (
     <>
